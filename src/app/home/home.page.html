@@ -1,20 +1,119 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-grid id="container">
+    <h3>{{memoria}}</h3>
+    <h1>{{resultado}}</h1>
+    <ion-row>
+      <ion-col>
+        <ion-button shape="circle" color="white" fill="outline" (click)="digitos('7')">7</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button shape="circle" color="white" fill="outline" (click)="digitos('8')">8</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button shape="circle" color="white" fill="outline" (click)="digitos('9')">9</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button shape="circle" color="#a3d469" fill="outline" (click)="operadores('+')">+</ion-button>
+      </ion-col>
+    </ion-row>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <ion-row>
+      <ion-col>
+        <ion-button shape="circle" color="white" fill="outline" (click)="digitos('4')">4</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button shape="circle" color="white" fill="outline" (click)="digitos('5')">5</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button shape="circle" color="white" fill="outline" (click)="digitos('6')">6</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button shape="circle" color="#a3d469" fill="outline" (click)="operadores('-')">-</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button shape="circle" color="white" fill="outline" (click)="digitos('1')">1</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button shape="circle" color="white" fill="outline" (click)="digitos('2')">2</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button shape="circle" color="white" fill="outline" (click)="digitos('3')">3</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button shape="circle" color="#a3d469" fill="outline" (click)="operadores('*')">*</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        
+      </ion-col>
+      <ion-col>
+        <ion-button shape="circle" color="white" fill="outline" (click)="digitos('0')">0</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button shape="circle" color="white" fill="outline" (click)="digitos('.')">.</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button shape="circle" color="#a3d469" fill="outline" (click)="operadores('/')">/</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button shape="circle" color="#be7f74" fill="outline" (click)="resetar()" >C</ion-button>
+      </ion-col>
+
+      <ion-col>
+
+      </ion-col>
+
+      <ion-col>
+
+      </ion-col>
+
+      <ion-col>
+        <ion-button shape="circle"  fill="outline" (click)="calcular()">=</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button shape="circle" color="#e3bc10" fill="outline" (click)="calcularQuadrado()">²</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button shape="circle" color="#e3bc10" fill="outline" (click)="calcularRaizQuadrada()">√</ion-button> 
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row>
+      <ion-col>
+        <ion-button shape="circle" color="#e3bc10" fill="outline" (click)="calcularseno()">sen</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button shape="circle" color="#e3bc10" fill="outline" (click)="calcularcosseno()">cos</ion-button> 
+      </ion-col>
+      <ion-col>
+        <ion-button shape="circle" color="#e3bc10" fill="outline" (click)="calculartangente()">tan</ion-button> 
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
+
+
+  <ion-tabs>
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="home">
+        <ion-icon name="apps"></ion-icon>
+        <ion-label>Calcular</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="configuracao">
+        <ion-icon name="flash"></ion-icon>
+        <ion-label>Configurações</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>

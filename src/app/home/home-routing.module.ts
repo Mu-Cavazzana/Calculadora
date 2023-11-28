@@ -6,6 +6,17 @@ const routes: Routes = [
   {
     path: '',
     component: HomePage,
+    children:[
+      {
+        path: 'configuracao',
+        children:[
+          {
+            path: '',
+            loadChildren: () => import('../pages/configuracao/configuracao.module').then( m => m.ConfiguracaoPageModule)
+          }
+        ]
+      }
+    ]
   }
 ];
 
